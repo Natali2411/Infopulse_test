@@ -5,13 +5,17 @@ class Employee:
         self.position = position
         self.salary = salary
     def full_name(self):
-        my_full_name = self.name + ' ' + self.surname
+        my_full_name = str(self.name) + ' ' + str(self.surname)
         return my_full_name
 
     def income(self, c_months):
         whole_salary = c_months * self.salary
         return whole_salary
 
+    def __str__(self):
+        return '<Employee: ' + self.full_name() + '>'
 
-#emp_name = Employee('Nataliia', 'Tiutiunnyk', 'QA')
-#print(emp_name)
+
+if __name__ == "__main__":
+    emp_name = Employee('Nataliia', 'Tiutiunnyk', 'QA')
+    print(emp_name)
