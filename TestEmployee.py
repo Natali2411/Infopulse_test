@@ -8,3 +8,4 @@ class ITEmployeeTest(unittest.TestCase):
     def test_names(self):
         self.assertEqual(self.emp.name, 'Nataliia')
         self.assertEqual(self.emp.surname, 'Tiutiunnyk')
+
